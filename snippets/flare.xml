@@ -7,6 +7,12 @@
            sync-j="4"
            revision="15" />
 
+  <remote  name="flare-main"
+           fetch="https://github.com/Project-Flare"
+           sync-c="true"
+           sync-j="4"
+           revision="15" />
+
   <!-- art -->
   <project path="art" name="art" groups="pdk" remote="flare" />
 
@@ -47,12 +53,12 @@
   <project path="manifest" name="manifest" remote="flare" />
 
   <!-- packages -->
-  <project path="packages/apps/FlareWallpaperStub" name="packages_apps_FlareWallpaperStub" remote="flare">
+  <project path="packages/apps/FlareWallpaperStub" name="packages_apps_FlareWallpaperStub" remote="flare-main"/>
   <!--project path="packages/apps/FaceUnlock" name="packages_apps_FaceUnlock" remote="flare-gitlab" /-->
   <!--project path="packages/apps/Launcher3" name="packages_apps_Launcher3" groups="pdk-fs,sysui-studio,pdk-cw-tvc" remote="flare" /-->
   <project path="packages/apps/Settings" name="packages_apps_Settings" groups="pdk-fs,pdk-cw-tvc" remote="flare" />
   <!--project path="packages/apps/ThemePicker" name="packages_apps_ThemePicker" groups="pdk-fs,sysui-studio" remote="flare" /-->
-  <project path="packages/modules/Connectivity" name="packages_modules_Connectivity" groups="pdk-cw-fs,pdk-fs" remote="flare" />
+  <project path="packages/modules/Connectivity" name="packages_modules_Connectivity" groups="pdk-cw-fs,pdk-fs" revision="15-QPR2" remote="flare-main" />
   <project path="packages/services/Telecomm" name="packages_services_Telecomm" groups="pdk-cw-fs,pdk-fs" remote="flare" />
 
   <!-- platform -->
@@ -63,13 +69,13 @@
   <project path="device/mediatek/sepolicy_vndr" name="device_mediatek_sepolicy_vndr" remote="flare" />
 
   <!-- system -->
-  <project path="system/core" name="system_core" groups="pdk" remote="flare" />
+  <project path="system/core" name="system_core" groups="pdk" revision="15-QPR2" remote="flare-main" />
   <project path="system/sepolicy" name="system_sepolicy" groups="pdk" remote="flare" />
   <project path="system/update_engine" name="system_update_engine" groups="pdk" remote="flare" />
 
   <!-- vendor -->
   <!--project path="vendor/extra" name="vendor_extra" remote="flare" /-->
-  <project path="vendor/support" name="vendor_support" remote="flare" />
+  <project path="vendor/support" name="vendor_support" remote="flare-main" />
   <project path="vendor/flare" name="vendor_flare" remote="flare" />
   <!--project path="vendor/gms" name="vendor_gms" remote="flare-gitlab" clone-depth="1" /-->
 
