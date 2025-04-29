@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <remote  name="flare"
+           fetch="https://github.com/Project-Flare-Staging"
+           sync-c="true"
+           sync-j="4"
+           revision="15" />
+
+  <!-- art -->
+  <project path="art" name="art" groups="pdk" remote="flare" />
+
+  <!-- bionic -->
+  <project path="bionic" name="bionic" groups="pdk" remote="flare" />
+
+  <!-- bootable -->
+  <project path="bootable/deprecated-ota" name="bootable_deprecated-ota" groups="pdk-cw" remote="flare" />
+  <project path="bootable/recovery" name="bootable_recovery" groups="pdk" remote="flare" />
+
+  <!-- build -->
+  <project path="build/make" name="build_make" groups="pdk,sysui-studio" remote="flare" >
+    <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
+    <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
+    <linkfile src="core" dest="build/core" />
+    <linkfile src="envsetup.sh" dest="build/envsetup.sh" />
+    <linkfile src="target" dest="build/target" />
+    <linkfile src="tools" dest="build/tools" />
+  </project>
+  <project path="build/release" name="build_release" groups="pdk,tradefed,sysui-studio" remote="flare" />
+  <project path="build/soong" name="build_soong" groups="pdk,tradefed,sysui-studio" remote="flare" >
+    <linkfile src="root.bp" dest="Android.bp" />
+    <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
+  </project>
+
+  <!-- external -->
+  <project path="external/skia" name="external_skia" groups="pdk,qcom_msm8x26" remote="flare" />
+
+  <!-- frameworks -->
+  <project path="frameworks/av" name="frameworks_av" groups="pdk" remote="flare" />
+  <project path="frameworks/base" name="platform_frameworks_base" groups="pdk-cw-fs,pdk-fs,sysui-studio" remote="flare" />
+  <project path="frameworks/native" name="frameworks_native" groups="pdk" remote="flare" />
+
+  <!-- hardware -->
+  <project path="hardware/google/pixel-sepolicy" name="hardware_google_pixel-sepolicy" groups="generic_fs,pixel,pdk-desktop" remote="flare" />
+
+  <!-- manifest -->
+  <project path="manifest" name="manifest" remote="flare" />
+
+  <!-- packages -->
+  <project path="packages/apps/FlareWallpaperStub" name="packages_apps_FlareWallpaperStub" remote="flare">
+  <!--project path="packages/apps/FaceUnlock" name="packages_apps_FaceUnlock" remote="flare-gitlab" /-->
+  <!--project path="packages/apps/Launcher3" name="packages_apps_Launcher3" groups="pdk-fs,sysui-studio,pdk-cw-tvc" remote="flare" /-->
+  <project path="packages/apps/Settings" name="packages_apps_Settings" groups="pdk-fs,pdk-cw-tvc" remote="flare" />
+  <!--project path="packages/apps/ThemePicker" name="packages_apps_ThemePicker" groups="pdk-fs,sysui-studio" remote="flare" /-->
+  <project path="packages/modules/Connectivity" name="packages_modules_Connectivity" groups="pdk-cw-fs,pdk-fs" remote="flare" />
+  <project path="packages/services/Telecomm" name="packages_services_Telecomm" groups="pdk-cw-fs,pdk-fs" remote="flare" />
+
+  <!-- platform -->
+  <project path="platform_testing" name="platform_testing" remote="flare" />
+
+  <!-- sepolicy -->
+  <project path="device/lineage/sepolicy" name="device_flare_sepolicy" remote="flare" />
+  <project path="device/mediatek/sepolicy_vndr" name="device_mediatek_sepolicy_vndr" remote="flare" />
+
+  <!-- system -->
+  <project path="system/core" name="system_core" groups="pdk" remote="flare" />
+  <project path="system/sepolicy" name="system_sepolicy" groups="pdk" remote="flare" />
+  <project path="system/update_engine" name="system_update_engine" groups="pdk" remote="flare" />
+
+  <!-- vendor -->
+  <!--project path="vendor/extra" name="vendor_extra" remote="flare" /-->
+  <project path="vendor/support" name="vendor_support" remote="flare" />
+  <project path="vendor/flare" name="vendor_flare" remote="flare" />
+  <!--project path="vendor/gms" name="vendor_gms" remote="flare-gitlab" clone-depth="1" /-->
+
+</manifest>
