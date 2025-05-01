@@ -53,6 +53,7 @@
   <project path="manifest" name="manifest" remote="flare" />
 
   <!-- packages -->
+  <project path="packages/apps/FlareZone" name="packages_apps_FlareZone" revision="15-QPR2" remote="flare-main"/>
   <project path="packages/apps/FlareWallpaperStub" name="packages_apps_FlareWallpaperStub" remote="flare-main"/>
   <!--project path="packages/apps/FaceUnlock" name="packages_apps_FaceUnlock" remote="flare-gitlab" /-->
   <!--project path="packages/apps/Launcher3" name="packages_apps_Launcher3" groups="pdk-fs,sysui-studio,pdk-cw-tvc" remote="flare" /-->
@@ -60,6 +61,7 @@
   <!--project path="packages/apps/ThemePicker" name="packages_apps_ThemePicker" groups="pdk-fs,sysui-studio" remote="flare" /-->
   <project path="packages/modules/Connectivity" name="packages_modules_Connectivity" groups="pdk-cw-fs,pdk-fs" revision="15-QPR2" remote="flare-main" />
   <project path="packages/services/Telecomm" name="packages_services_Telecomm" groups="pdk-cw-fs,pdk-fs" remote="flare" />
+  <project path="packages/overlays/Themes" name="packages_overlays_Themes" remote="flare-main"/>
 
   <!-- platform -->
   <project path="platform_testing" name="platform_testing" remote="flare" />
