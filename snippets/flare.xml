@@ -59,6 +59,7 @@
   <!--project path="packages/apps/Launcher3" name="packages_apps_Launcher3" groups="pdk-fs,sysui-studio,pdk-cw-tvc" remote="flare" /-->
   <project path="packages/apps/Settings" name="packages_apps_Settings" groups="pdk-fs,pdk-cw-tvc" remote="flare" />
   <!--project path="packages/apps/ThemePicker" name="packages_apps_ThemePicker" groups="pdk-fs,sysui-studio" remote="flare" /-->
+  <project path="packages/apps/TouchGestures" name="packages_apps_TouchGestures" groups="pdk-fs,sysui-studio" remote="flare" />
   <project path="packages/modules/Connectivity" name="packages_modules_Connectivity" groups="pdk-cw-fs,pdk-fs" revision="15-QPR2" remote="flare-main" />
   <project path="packages/services/Telecomm" name="packages_services_Telecomm" groups="pdk-cw-fs,pdk-fs" remote="flare" />
   <project path="packages/overlays/Themes" name="packages_overlays_Themes" remote="flare-main"/>
