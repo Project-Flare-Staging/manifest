@@ -1,3 +1,5 @@
+![Banner](https://github.com/user-attachments/assets/2ee33ef5-f45f-4ea6-8780-9086905c493a)
+
 # Project Flare | Reborn from ashes of Project Blaze
 An Android Operating System Based On AOSP.
 
