@@ -953,7 +953,6 @@
   <project path="system/libcppbor" name="platform/system/libcppbor" groups="pdk" />
   <project path="system/libfmq" name="platform/system/libfmq" groups="pdk" />
   <project path="system/libhidl" name="platform/system/libhidl" groups="pdk,sysui-studio" />
-  <project path="system/libhwbinder" name="platform/system/libhwbinder" groups="pdk" />
   <project path="system/libprocinfo" name="platform/system/libprocinfo" groups="pdk" />
   <project path="system/librustutils" name="platform/system/librustutils" groups="pdk" />
   <project path="system/libsysprop" name="platform/system/libsysprop" groups="pdk" />
