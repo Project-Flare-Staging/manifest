@@ -62,7 +62,7 @@
   <project path="packages/apps/FlareZone" name="packages_apps_FlareZone" revision="15-QPR2" remote="flare-main"/>
   <project path="packages/modules/Wifi" name="packages_modules_Wifi" groups="pdk-cw-fs,pdk-fs,sysui-studio" revision="15-QPR2" remote="flare-main" />
   <project path="packages/apps/FlareWallpaperStub" name="packages_apps_FlareWallpaperStub" remote="flare-main"/>
-  <project path="packages/apps/GameSpace" name="packages_apps_GameSpace" groups="pdk-fs" revision="15-QPR2" remote="flare-main" />
+  <project path="packages/apps/GameSpace" name="packages_apps_GameSpace" groups="pdk-fs" revision="15" remote="flare" />
   <project path="packages/apps/FaceUnlock" name="packages_apps_ParanoidSense" revision="15-QPR2" remote="flare-main" />
   <project path="packages/apps/Launcher3" name="packages_apps_Launcher3" groups="pdk-fs,sysui-studio,pdk-cw-tvc" remote="flare" />
   <project path="packages/inputmethods/LatinIME" name="packages_inputmethods_LatinIME" groups="pdk-fs,sysui-studio,pdk-cw-tvc" remote="flare" />
