@@ -2,7 +2,7 @@
 <manifest>
 
   <remote  name="aosp"
-           fetch=".."
+           fetch="https://android.googlesource.com/"
            review="https://android-review.googlesource.com/" />
   <default revision="refs/tags/android-16.0.0_r3"
            remote="aosp"
@@ -1030,5 +1030,10 @@
     <copyfile src="lk_inc.mk" dest="lk_inc.mk" />
   </project>
   <!-- END open-source projects -->
+
+  <!-- Project Flare -->
+  <include name="snippets/remove.xml" />
+  <include name="snippets/lineage.xml" />
+  <include name="snippets/flare.xml" />
 
 </manifest>

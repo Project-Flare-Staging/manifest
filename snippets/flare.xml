@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+<remote  name="flare"
+            revision="16"
+            fetch="https://github.com/Project-Flare-Staging"
+            sync-c="true"
+            sync-j="4" />
+			
+  <remote  name="flare-codeberg"
+           fetch="https://codeberg.org/Dheeraj3031A"
+           sync-c="true"
+           sync-j="4"
+           revision="16" />
+
+  <!-- art -->
+  <project path="art" name="art" groups="pdk" remote="flare" />
+
+  <!-- bionic -->
+  <project path="bionic" name="bionic" groups="pdk" remote="flare" />
+
+  <!-- bootable -->
+  <project path="bootable/deprecated-ota" name="bootable_deprecated-ota" groups="pdk-cw" remote="flare" />
+  <project path="bootable/recovery" name="bootable_recovery" groups="pdk" remote="flare" />
+
+  <!-- build -->
+  <project path="build/blueprint" name="build_blueprint" remote="flare"  />
+  <project path="build/make" name="build" groups="pdk,sysui-studio" remote="flare" >
+    <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
+    <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
+    <linkfile src="core" dest="build/core" />
+    <linkfile src="envsetup.sh" dest="build/envsetup.sh" />
+    <linkfile src="target" dest="build/target" />
+    <linkfile src="tools" dest="build/tools" />
+  </project>
+  <project path="build/release" name="build_release" groups="pdk,tradefed,sysui-studio" remote="flare" />
+  <project path="build/soong" name="build_soong" groups="pdk,tradefed,sysui-studio" remote="flare" >
+    <linkfile src="root.bp" dest="Android.bp" />
+    <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
+  </project>
+
+  <!-- external -->
+  <project path="external/bouncycastle" name="external_bouncycastle" groups="pdk" remote="flare" />
+  <project path="external/skia" name="external_skia" groups="pdk,qcom_msm8x26" remote="flare" />
+  <project path="external/avb" name="external_avb" groups="pdk" remote="flare" />
+  <project path="external/dtc" name="external_dtc" groups="pdk" remote="flare" />
+  <project path="external/e2fsprogs" name="external_e2fsprogs" groups="pdk" remote="flare" />
+  <project path="external/gptfdisk" name="external_gptfdisk" groups="pdk" remote="flare" />
+  <project path="external/mksh" name="external_mksh" groups="pdk" remote="flare" />
+  <project path="external/tinycompress" name="external_tinycompress" groups="pdk" remote="flare" />
+  <project path="external/zstd" name="external_zstd" groups="pdk" remote="flare" />
+  <project path="external/wpa_supplicant_8" name="external_wpa_supplicant_8" groups="pdk" remote="flare" />
+  
+  <!-- frameworks -->
+  <project path="frameworks/av" name="frameworks_av" groups="pdk" remote="flare" />
+  <project path="frameworks/base" name="frameworks_base" groups="pdk-cw-fs,pdk-fs,sysui-studio" remote="flare" />
+  <project path="frameworks/libs/systemui" name="frameworks_libs_systemui" groups="pdk-cw-fs,pdk-fs,sysui-studio" remote="flare" />
+  <project path="frameworks/native" name="frameworks_native" groups="pdk" remote="flare" />
+  
+  <!-- hardware -->
+  <project path="hardware/broadcom/libbt" name="hardware_broadcom_libbt" groups="pdk" remote="flare" />
+  <project path="hardware/interfaces" name="hardware_interfaces" groups="pdk,sysui-studio" remote="flare" />
+  <project path="hardware/libhardware" name="hardware_libhardware" groups="pdk" remote="flare" />
+  <project path="hardware/flare/interfaces" name="hardware_flare_interfaces" remote="flare" />
+  <project path="hardware/google/pixel" name="hardware_google_pixel" remote="flare" />
+  <project path="hardware/lineage/compat" name="hardware_lineage_compat" remote="flare" />
+  <project path="hardware/qcom/wlan" name="hardware_qcom_wlan" remote="flare" />
+  <project path="hardware/qcom-caf/wlan" name="hardware_qcom-caf_wlan" remote="flare" />
+  <project path="hardware/qcom-caf/common" name="hardware_qcom-caf_common" remote="flare" >
+    <!-- add guard for AOSP hardware/qcom dir -->
+    <linkfile src="os_pickup_aosp.mk" dest="hardware/qcom/Android.mk" />
+    <!-- add guards for CAF repositories -->
+    <linkfile src="os_pickup_sepolicy_vndr.mk" dest="device/qcom/sepolicy_vndr/SEPolicy.mk" />
+    <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/msm8953/Android.bp" />
+    <linkfile src="os_pickup.bp" dest="hardware/qcom-caf/msm8996/Android.bp" />
+    <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/msm8996/Android.mk" />
+    <linkfile src="os_pickup.bp" dest="hardware/qcom-caf/msm8998/Android.bp" />
+    <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/sdm660/Android.bp" />
+    <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/sdm845/Android.bp" />
+    <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/sm8150/Android.bp" />
+    <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/sm8250/Android.bp" />
+    <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/sm8350/Android.bp" />
+    <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/sm8450/Android.bp" />
+    <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/sm8550/Android.bp" />
+    <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/sm8650/Android.bp" />
+    <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/sm8750/Android.bp" />
+  </project>
+
+  <!-- manifest -->
+  <project path="manifest" name="manifest" remote="flare" />
+
+  <!-- packages -->
+  <project path="packages/apps/BtHelper" name="packages_apps_BtHelper" remote="flare" />
+  <project path="packages/apps/ColumbusService" name="packages_apps_ColumbusService" remote="flare" />
+  <project path="packages/apps/FaceUnlock" name="packages_apps_FaceUnlock" remote="flare-codeberg" />
+  <project path="packages/apps/FlareZone" name="packages_apps_FlareZone" remote="flare" />
+  <project path="packages/apps/Launcher3" name="packages_apps_Launcher3" groups="pdk-fs,sysui-studio,pdk-cw-tvc" remote="flare" />
+  <project path="packages/apps/Settings" name="packages_apps_Settings" groups="pdk-fs,pdk-cw-tvc" remote="flare" />
+  <project path="packages/apps/ThemePicker" name="packages_apps_ThemePicker" groups="pdk-fs,sysui-studio" remote="flare" />
+  <project path="packages/apps/WallpaperPicker2" name="packages_apps_WallpaperPicker2" groups="pdk-fs,sysui-studio" remote="flare" />
+  <project path="packages/modules/Connectivity" name="packages_modules_Connectivity" groups="pdk-cw-fs,pdk-fs" remote="flare" />
+  <project path="packages/services/Telecomm" name="packages_services_Telecomm" groups="pdk-cw-fs,pdk-fs" remote="flare" />
+
+  <!-- sepolicy -->
+  <project path="device/flare/sepolicy" name="device_flare_sepolicy" remote="flare" />
+
+  <!-- system -->
+  <project path="system/core" name="system_core" groups="pdk" remote="flare" />
+  <project path="system/libhwbinder" name="system_libhwbinder" groups="pdk" remote="flare" />
+  <project path="system/netd" name="system_netd" groups="pdk" remote="flare" />
+  <project path="system/sepolicy" name="system_sepolicy" groups="pdk" remote="flare" />
+  <project path="system/update_engine" name="system_update_engine" groups="pdk" remote="flare" />
+
+  <!-- vendor -->
+  <project path="vendor/flare" name="vendor_flare" remote="flare" />
+
+</manifest>
